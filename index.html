@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Website</title>
+    <title>Click Me 😏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
-            background-color: #111;
-            color: white;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
             font-family: Arial;
+            color: white;
             text-align: center;
-            padding-top: 100px;
         }
 
-        h1 {
-            color: #00ffcc;
-            font-size: 40px;
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #00ffcc;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
-        p {
-            font-size: 18px;
+        #text {
+            display: none;
+            margin-top: 20px;
         }
     </style>
-
 </head>
+
 <body>
 
-    <h1>My First Website 🚀</h1>
-    <p>I built this myself using AI and GitHub!</p>
+<div>
+    <button onclick="rickroll()">Click Me</button>
+
+    <div id="text">
+        <h2>
+            never gonna give you up, never gonna let you down,<br>
+            never gonna run around and desert you.
+        </h2>
+    </div>
+</div>
+
+<script>
+function rickroll() {
+    document.getElementById("text").style.display = "block";
+
+    window.open(
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1",
+        "_blank",
+        "width=800,height=600"
+    );
+}
+</script>
 
 </body>
 </html>
